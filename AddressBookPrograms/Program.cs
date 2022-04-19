@@ -12,8 +12,12 @@ namespace AddressBookPrograms
         {
             Console.WriteLine(">>>> Welcome to Address-Book Details <<<<\n");
             Console.WriteLine("Enter Contact Details");
-            AddressBookContact1 ad = new AddressBookContact1();
-            ad.Display();
+           
+            AddressBookEdit  edit = new AddressBookEdit();
+            edit.Display();
+            Console.WriteLine("\nEdit The information Here : ");
+            string name = Console.ReadLine();
+            edit.EditContact(name);
         }
     }
 }
