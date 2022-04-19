@@ -21,7 +21,7 @@ namespace AddressBookPrograms
                 Mobile = Convert.ToInt64(Console.ReadLine()),
                 PostalCode = Convert.ToInt32(Console.ReadLine()),
             };
-            /*Contact address2 = new Contact()
+            Contact address2 = new Contact()
             {
                 FirstName = Console.ReadLine(),
                 LastName = Console.ReadLine(),
@@ -30,9 +30,9 @@ namespace AddressBookPrograms
                 Email = Console.ReadLine(),
                 Mobile = Convert.ToInt64(Console.ReadLine()),
                 PostalCode = Convert.ToInt32(Console.ReadLine()),
-            };*/
+            };
             addressBook.Add(address1);
-            //addressBook.Add(address2);
+            addressBook.Add(address2);
         }
         public void AddContactToAddressBook(Contact con)
         {
@@ -53,38 +53,36 @@ namespace AddressBookPrograms
             {
                 if (con.FirstName.Equals(name))
                 {
-                    Console.WriteLine("Enter the Option To Update");
-                    Random random = new Random();
-                    int option = random.Next(1, 7);
-                    switch (option)
+                    Console.WriteLine("Enter the Option To Update between (1-6) :");
+                    int select = Convert.ToInt32(Console.ReadLine());
+                    switch (select)
                     {
                         case 1:
-                            Console.WriteLine("Enter the Information to Update");
+                            Console.WriteLine("Enter the Last Name to Update");
                             con.LastName = Console.ReadLine();
                             break;
                         case 2:
-                            Console.WriteLine("Enter the Information to Update");
+                            Console.WriteLine("Enter the Address to Update");
                             con.Address = Console.ReadLine();
                             break;
                         case 3:
-                            Console.WriteLine("Enter the Information to Update");
+                            Console.WriteLine("Enter the State to Update");
                             con.State = Console.ReadLine(); 
                             break;
                         case 4:
-                            Console.WriteLine("Enter the Information to Update");
+                            Console.WriteLine("Enter the Email to Update");
                             con.Email = Console.ReadLine();
                             break;
                         case 5:
-                            Console.WriteLine("Enter the Information to Update");
+                            Console.WriteLine("Enter the ZipCode to Update");
                             con.PostalCode = Convert.ToInt32(Console.ReadLine());
                             break;
                         case 6:
-                            Console.WriteLine("Enter the Information to Update");
+                            Console.WriteLine("Enter the Mobile to Update");
                             con.Mobile = Convert.ToInt64(Console.ReadLine()); 
                             break;
                         default:
                             Console.WriteLine("Enter Correct Option for Edit to Update");
-                            con.Mobile = Convert.ToInt64(Console.ReadLine());
                             break;
                     }
                 }
